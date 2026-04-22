@@ -16,7 +16,7 @@ html, body{
 
     background-color: red;
 }
-.rabbit{
+[data-class='rabbit']{
     position: relative;
     background-color: rgb(241, 229, 229);
     color: rgb(50, 1, 1);
@@ -24,7 +24,7 @@ html, body{
     border: 2px solid rgb(102, 1, 1);
     border-radius: 10px;
 }
-.alice{
+[data-class='alice']{
     position: relative;
     background-color: rgb(241, 229, 229);
     color: rgb(50, 1, 1);
@@ -32,10 +32,10 @@ html, body{
     border: 2px solid rgb(102, 1, 1);
     border-radius: 10px;
 }
-.alice__texte{
+[data-class='alice__texte']{
     text-align: right;
 }
-.rabbit::before{
+[data-class='rabbit']::before{
 	content:"";
 	position:absolute;
 	bottom:-24px; 
@@ -44,7 +44,7 @@ html, body{
 	border-right:12px solid transparent; 
 	border-top:24px solid rgb(102, 1, 1);
 }
-.rabbit::after{
+[data-class='rabbit']::after{
     content:"";
 	position:absolute;
 	bottom:-18px; 
@@ -53,7 +53,7 @@ html, body{
 	border-right:8px solid transparent; 
 	border-top:20px solid rgb(241, 229, 229); 
 }
-.alice::before{
+[data-class='alice']::before{
 	content:"";
 	position:absolute;
 	bottom:-26px; 
@@ -62,7 +62,7 @@ html, body{
 	border-left:12px solid transparent; 
 	border-top:24px solid rgb(102, 1, 1);
 }
-.alice::after{
+[data-class='alice']::after{
     content:"";
 	position:absolute;
 	bottom:-20px; 
@@ -71,9 +71,9 @@ html, body{
 	border-left:7px solid transparent; 
 	border-top:20px solid rgb(241, 229, 229); 
 }
-.dialogue__texte{
+[data-class^='dialogue__texte']{
    display: none;
 }
-.active{
-    display: flex;
+[data-class*='active']{
+    display: block;
 }

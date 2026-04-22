@@ -35,6 +35,7 @@ function animate(timestamp) {
 
 }
 
-window.requestAnimationFrame( ( timestamp ) => {
-    animate( timestamp );
-} );
+// window.requestAnimationFrame( ( timestamp ) => {
+//     animate( timestamp );
+// } );
+
