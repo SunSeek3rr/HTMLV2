@@ -39,3 +39,6 @@ function animate(timestamp) {
 //     animate( timestamp );
 // } );
 
+window.addEventListener("scroll", () => {
+    
+}
