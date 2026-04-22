@@ -27,11 +27,10 @@ body{
     border-radius: 50%;
     pointer-events: none;
     z-index: 98;
-
-    background-color: red;
+    opacity: 1;
 }
 
-[data-class='imgTest'] {
+[data-class='img__container'] {
 
     img {
         position: fixed;
@@ -42,4 +41,35 @@ body{
     img:first-of-type{
         opacity: 0;
     }
+}
+
+[data-class='img--2']{
+    opacity: 0;
+}
+[data-class='img--3']{
+    opacity: 0;
+}
+[data-class='img--4']{
+    opacity: 0;
+}
+[data-class='img--5']{
+    opacity: 0;
+}
+[data-class='img--6']{
+    opacity: 0;
+}
+[data-class='img--7']{
+    opacity: 0;
+}
+[data-class='img--8']{
+    opacity: 0;
+}
+[data-class='img--9']{
+    opacity: 0;
+}
+[data-class='img--10']{
+    opacity: 0;
+}
+[data-class='img--11']{
+    opacity: 0;
 }
