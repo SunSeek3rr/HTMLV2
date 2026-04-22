@@ -39,6 +39,10 @@ function animate(timestamp) {
 //     animate( timestamp );
 // } );
 
-window.addEventListener("scroll", () => {
-    
-}
+(window).scroll(function(){
+    if ((this).scrollTop() > 1) {
+       ('[data-class=rabbit] [data-class^=dialogue__texte]').addAttribute('active');
+    } else {
+       ('[data-class=rabbit] [data-class*=active]').removeAttribute('active');
+    }
+});
