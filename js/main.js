@@ -1,6 +1,9 @@
-const cursor = document.querySelector('.customCursor');
+const cursor = document.querySelector("[data-class=customCursor]");
+const imgTest = document.querySelector("[data-class=imgTest]");
+const imgTest1 = document.querySelector("[data-class=imgTest-1]");
+const imgTest2 = document.querySelector("[data-class=imgTest-2]");
 
-gsap.set(".customCursor", { xPercent: -50, yPercent: -50});
+gsap.set(cursor, { xPercent: -50, yPercent: -50});
 
 const colors = ['red', 'blue', 'yellow', 'pink'];
 let i = 0;
@@ -17,7 +20,7 @@ document.addEventListener('mousemove', (e) =>{
 
 let previousTime = 0;
 
-function animate(timestamp) {
+function animate() {
     setTimeout(()=>{
         i++;
 
@@ -27,14 +30,40 @@ function animate(timestamp) {
             ease: "power2.out",
         });
 
-        window.requestAnimationFrame( ( timestamp ) => {
-            animate( timestamp );
+        window.requestAnimationFrame( () => {
+            animate();
         } );
 
-    }, 82);
+    }, 776);
 
 }
 
-window.requestAnimationFrame( ( timestamp ) => {
-    animate( timestamp );
+gsap.to(imgTest1, {
+    scrollTrigger: {
+        trigger :imgTest1,
+        markers: true,
+        start: "top top",
+        end: "bottom center",
+        scrub: true,
+        pin: true
+    },
+    scale : 12,
+    y:3400,
+    opacity:0,
+    markers: true,
+})
+
+gsap.to(imgTest2, {
+    scrollTrigger: {
+        trigger :imgTest2,
+        markers: true,
+        start: "top top",
+        end: "bottom center",
+        scrub: true,
+    },
+    opacity: 1
+})
+
+window.requestAnimationFrame( () => {
+    animate();
 } );
